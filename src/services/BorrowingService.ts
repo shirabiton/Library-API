@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
-import BorrowingModel from '../models/BorrowingModel';
-import EmployeeModel from '../models/EmployeeModel';
+import BorrowingModel, {Borrowing} from '../models/BorrowingModel';
 
 // borrow book
 export const borrowBook = async (req: Request, res: Response) => {
@@ -19,7 +18,7 @@ export const borrowBook = async (req: Request, res: Response) => {
       "employee": employee,
       "subscriber": subscriber,
     }
-    const newEmployee = await EmployeeModel.create(newBorrowing);
+    const newEmployee = await BorrowingModel.create(newBorrowing);
     res.status(201).json(newEmployee);
   }
   catch (error) {
@@ -100,5 +99,3 @@ export const lateBookReturnDate = async (req: Request, res: Response) => {
     res.status(500).json({ message: 'Server Error' });
   }
 };
-
-
