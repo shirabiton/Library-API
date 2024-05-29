@@ -9,7 +9,8 @@ enum Author {
     LibbyKlein = 'LibbyKlein',
     HaimGreenbaum = 'HaimGreenbaum',
     AvrahamOhayon = 'AvrahamOhayon',
-    KobiLevy = 'KobiLevy'
+    KobiLevy = 'KobiLevy',
+    JohannaSpyri = 'JohannaSpyri',
 }
 
 enum Genre {

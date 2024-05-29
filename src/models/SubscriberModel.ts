@@ -8,7 +8,6 @@ export interface Subscriber extends Document {
     email: string;
     address: string;
     city: City;
-    // borrowings: Borrowing[]
     debt: number;
 }
 
@@ -19,7 +18,6 @@ const SubscriberSchema: Schema = new Schema({
     email: { type: String },
     address: { type: String },
     city: { type: Number, enum: Object.values(City), required: true },
-    // borrowings: { type: Schema.Types.ObjectId(Borrowing), required: true },
     debt: { type: Number, required: true },
 });
 
